@@ -73,16 +73,69 @@
             	<a role="button" href="mailto.campsites@nucamp.com" class="btn btn-link"><i class="fa fa-envelope-o"></i> campsites@nucamp.co</a>
             </div>
         </div>
-
+ <!-- Form Starts -->
         <div class="row row-content">
             <div class="col-12">
                 <h2>Send us your Feedback</h2>
                 <hr />
             </div>
             <div class="col-md-10">
-                Form goes here
+                <form>
+                    <div class="row form-group">
+                        <label for="first" class="col-md-2 col-form-label">Firs Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="first" name="firsName" placeholder="Firs Name">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="last" class="col-md-2 col-form-label">Last Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="last" name="lastName" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="area" class="col-md-2 col-form-label">Contact Tel.</label>
+                        <div class="col-5 col-md-3">
+                            <input type="tel" class="form-control" id="area" name="areacode" placeholder="Area code">   
+                        </div> 
+                        <div class="col-7">            
+                            <input type="tel" class="form-control" name="tel" placeholder="Tel. number"> 
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label for="email" class="col-md-2 col-form-label">Email</label>
+                        <div class="col-md-10">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="sample@nucamp.com"> 
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col offset-md-2">
+                            May we contact you?
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="yes" name="contactRadio" value="yes"> 
+                                <label for="yes"  class="col-form-label" >Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" class="form-check-input" id="no" name="contactRadio" value="no"> 
+                                <label for="no" class="col-form-label">No</label>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class="row form-group" > 
+                        <label for="feedback" class="col-md-2" col-form-label>Your Feedback</label> 
+                        <div class="col-md-10">
+                            <textarea id="feedback" class="form-control" name="feedback" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="row form-group">   
+                        <div class="col-md-10 offset-md-2">
+                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                        </div>
+                    </div>
+                </form>
             </div>
        </div>
+ <!-- Form Ends -->       
 
     </div>
 
