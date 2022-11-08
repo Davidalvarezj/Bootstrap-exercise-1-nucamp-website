@@ -35,7 +35,7 @@
         </div>
     </header>
 
-    <!-- ---Reserve Modal Window-- -->
+<!-- ---Reserve Modal Window-- -->
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-lg modal-dialog" role="document">
             <div class="modal-content">
@@ -90,7 +90,6 @@
     </div>
     <!-- ---/Reserve Modal Window-- -->
 
-
 <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
@@ -110,6 +109,8 @@
             </div>
         </div>    
     </nav>
+    <!-- /Navbar -->
+
 <!-- ---Login Modal Window-- -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog" role="document">
@@ -148,11 +149,9 @@
         </div>
     </div>
 <!-- ---/Login Modal Window-- -->
-<!-- /Navbar -->
 
+<!-- Carrousel -->
     <div class="container">
-
-
         <div class="row row-content">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -192,14 +191,14 @@
                         <span class="carousel-control-next-icon"></span>
                         <span class="sr-only">Next</span>
                     </a>
+                        <button class="btn btn-danger btn-sm" id="carouselButton"><i class="fa fa-pause"></i></button>
                 </div>
-
             </div>
         </div>
+<!-- /Carrousel -->
 
 
-
-
+<!-- Horizontal section -->
         <div class="row row-content align-items-center">
             <div class="col-sm-4 col-md-3 order-sm-last">
                 <h2 class="text-sm-right">Discover & Review</h2>
@@ -242,9 +241,8 @@
                 </div>
             </div>
         </div>
-
-</div>
-
+    </div>
+<!-- /Horizontal section -->
 
     <footer class="site-footer">
         <div class="container">
@@ -272,15 +270,27 @@
             </div>    
         </div>
     </footer>
+
     <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
     <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
+        $(function (){
+            $(".carousel").carousel({interval:2000});
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("i").hasClass("fa-pause")){
+                    $(".carousel").carousel("pause");
+                    $("#carouselButton").children("i").removeClass("fa-pause");
+                    $("#carouselButton").children("i").addClass("fa-play");
+                } else{
+                    $(".carousel").carousel("cycle");
+                    $("#carouselButton").children("i").removeClass("fa-play");
+                    $("#carouselButton").children("i").addClass("fa-pause");
+                }
+            });
+        });
     </script>
 
 
